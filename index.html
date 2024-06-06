@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>m4</title>
+</head>
+<body>
+<center><input type="button" value="Обчислювальний процес" onclick="x()"></center>
+<script>
+    var xmin = prompt('Введіть найменший x','');
+    var xmax = prompt('Введіть найбільший x','');
+    var U;
+    function x(){
+            for (var i=xmax;i>=xmin;i=i-2){
+                if(i<-1){
+                    U = Math.sin(i)+Math.tan(i);
+                }
+                if(-1<i<=1){
+                    U = Math.pow(i,2)+2*Math.pow(i,3);
+                }
+                if(i>1){
+                    U = Math.sqrt(Math.pow(i,3))-Math.exp(i);
+                }
+                alert("Рeзультат розрахунків "+i+" = "+U);
+            }
+        }
+</script>
+
+</body>
+</html>
